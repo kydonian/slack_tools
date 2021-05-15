@@ -28,7 +28,7 @@ class Slack_Message {
 		$send = curl_init( 'https://slack.com/api/chat.postMessage' );
 		curl_setopt( $send, CURLOPT_POST, 1 );
 		curl_setopt( $send, CURLOPT_POSTFIELDS, json_encode( $jsonData ) );
-	    curl_setopt( $send, CURLOPT_RETURNTRANSFER, true );
+	    	curl_setopt( $send, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $send, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Authorization: Bearer ' . $this->auth ) ); 
 		return json_decode(curl_exec( $send ), 1 );
 	}
@@ -59,7 +59,7 @@ class Slack_Message {
 		
 		curl_setopt( $update, CURLOPT_POST, 1 );
 		curl_setopt( $update, CURLOPT_POSTFIELDS, $jsonData );
-	    curl_setopt( $update, CURLOPT_RETURNTRANSFER, true );
+	    	curl_setopt( $update, CURLOPT_RETURNTRANSFER, true );
 	    
 		return json_decode( curl_exec( $update ), 1 );
 	}
@@ -95,7 +95,7 @@ class Slack_Message {
 
 		curl_setopt( $add, CURLOPT_POST, 1 );
 		curl_setopt( $add, CURLOPT_POSTFIELDS, json_encode( $jsonData ) );
-	    curl_setopt( $add, CURLOPT_RETURNTRANSFER, true );
+	    	curl_setopt( $add, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $add, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Authorization: Bearer ' . $this->auth ) ); 
 		
 		return json_decode( curl_exec( $add ), 1 );
@@ -113,7 +113,7 @@ class Slack_Message {
 
 		curl_setopt( $remove, CURLOPT_POST, 1 );
 		curl_setopt( $remove, CURLOPT_POSTFIELDS, json_encode( $jsonData ) );
-	    curl_setopt( $remove, CURLOPT_RETURNTRANSFER, true );
+	    	curl_setopt( $remove, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $remove, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Authorization: Bearer ' . $this->auth ) ); 
 		
 		return json_decode( curl_exec( $remove ), 1 );  
@@ -129,7 +129,7 @@ class Slack_Message {
 
 		curl_setopt( $discover, CURLOPT_POST, 1 );
 		curl_setopt( $discover, CURLOPT_POSTFIELDS, json_encode( $jsonData ) );
-	    curl_setopt( $discover, CURLOPT_RETURNTRANSFER, true );
+	    	curl_setopt( $discover, CURLOPT_RETURNTRANSFER, true );
 		curl_setopt( $discover, CURLOPT_HTTPHEADER, array( 'Content-Type: application/json', 'Authorization: Bearer ' . $this->auth ) ); 
 		
 		$result = json_decode( curl_exec( $discover ), 1 );
